@@ -31,6 +31,7 @@ Users enter their name.
 Users select ingredients.
 Nutrition information is retrieved from an API.
 Orders are stored in Snowflake.
+
 Skills Demonstrated
 Python Development
 SQL
