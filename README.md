@@ -1,5 +1,4 @@
-🥤 Melanie's Smoothies
-A Streamlit application built as part of the Snowflake Data Application Builders Workshop.
+
 
 🥤 Melanie's Smoothies
 A Streamlit application built as part of the Snowflake Data Application Builders Workshop.
