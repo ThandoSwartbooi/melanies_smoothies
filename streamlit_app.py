@@ -5,7 +5,7 @@ import requests
 from snowflake.snowpark.functions import col
 
 # Write directly to the app
-st.title(f":cup_with_straw: Customize Your Smoothie! :cup_with_straw:")
+st.title(":cup_with_straw: Customize Your Smoothie! :cup_with_straw:")
 st.write(
     """Choose the fruits you want in your custom Smoothie!"""
 )
@@ -33,8 +33,10 @@ if ingredients_list:
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + ' '
 
+        st.subheader(fruit_chosen + ' Nutrition Information')
+
         smoothiefruit_response = requests.get(
-            "https://my.smoothiefruit.com/api/fruit/watermelon",
+            "https://my.smoothiefruit.com/api/fruit/" + fruit_chosen,
             timeout=20
         )
 
@@ -56,4 +58,3 @@ if ingredients_list:
     if time_to_insert:
         session.sql(my_insert_stmt).collect()
         st.success('Your Smoothie is ordered, ' + name_on_order + '!', icon="✅")
-        
